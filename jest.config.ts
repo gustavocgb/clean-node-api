@@ -31,7 +31,7 @@ export default {
   // ],
 
   // Indicates which provider should be used to instrument code for coverage
-  coverageProvider: 'v8',
+  // coverageProvider: 'v8',
 
   // A list of reporter names that Jest uses when writing coverage reports
   // coverageReporters: [
@@ -118,7 +118,7 @@ export default {
 
   // A list of paths to directories that Jest should use to search for files in
   roots: [
-    ['<rootDir>/src']
+    '<rootDir>/src/'
   ],
 
   // Allows you to use a custom runner instead of Jest's default test runner
