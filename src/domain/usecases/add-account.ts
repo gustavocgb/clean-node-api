@@ -7,7 +7,7 @@ export interface AddAccountModel {
 }
 
 export interface AddAccount {
-  add (account: AddAccountModel): AccountModel
+  add (account: AddAccountModel): Promise<AccountModel>
 }
 
 // AccountModel sera um model de uma entidade da base de dados
