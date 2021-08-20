@@ -1,6 +1,6 @@
-import { HttpRequest, Controller, EmailValidator, AddAccount } from './singup-protocols'
+import { HttpRequest, HttpResponse, Controller, EmailValidator, AddAccount } from './singup-protocols'
 import { MissingParamError, InvalidParamError } from '../../errors'
-import { badRequest, serverError } from '../../helpers/http-helper'
+import { badRequest, serverError, ok } from '../../helpers/http-helper'
 
 export class SignUpController implements Controller {
   private readonly emailValidator: EmailValidator
@@ -11,7 +11,7 @@ export class SignUpController implements Controller {
     this.addAccount = addAccount
   }
 
-  handle (httpRequest: HttpRequest): any {
+  handle (httpRequest: HttpRequest): HttpResponse {
     try {
       const { name, email, password, passwordConfirmation } = httpRequest.body
       const requiredFields = ['name', 'email', 'password', 'passwordConfirmation']
@@ -32,10 +32,7 @@ export class SignUpController implements Controller {
         email,
         password
       })
-      return {
-        statusCode: 200,
-        body: account
-      }
+      return ok(account)
     } catch (error) {
       return serverError()
     }
