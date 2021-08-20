@@ -4,7 +4,7 @@ import { EmailValidator } from '../protocols'
 
 interface SutTypes {
   sut: SignUpController
-  emailValidadorStub: EmailValidator
+  emailValidatorStub: EmailValidator
 }
 
 // factory
@@ -27,11 +27,11 @@ const makeEmailValidadorError = (): EmailValidator => {
 }
 
 const makeSut = (): SutTypes => {
-  const emailValidadorStub = makeEmailValidador()
-  const sut = new SignUpController(emailValidadorStub)
+  const emailValidatorStub = makeEmailValidador()
+  const sut = new SignUpController(emailValidatorStub)
   return {
     sut,
-    emailValidadorStub
+    emailValidatorStub
   }
 }
 
@@ -94,8 +94,8 @@ describe('SignUp Controller', () => {
   })
 
   test('Should return 400 if an invalid email is provided', () => {
-    const { sut, emailValidadorStub } = makeSut()
-    jest.spyOn(emailValidadorStub, 'isValid').mockReturnValueOnce(false)
+    const { sut, emailValidatorStub } = makeSut()
+    jest.spyOn(emailValidatorStub, 'isValid').mockReturnValueOnce(false)
     const httpRequest = {
       body: {
         name: 'any_name',
@@ -110,8 +110,8 @@ describe('SignUp Controller', () => {
   })
 
   test('Should call EmailValidator with correct email', () => {
-    const { sut, emailValidadorStub } = makeSut()
-    const isValidSpy = jest.spyOn(emailValidadorStub, 'isValid')
+    const { sut, emailValidatorStub } = makeSut()
+    const isValidSpy = jest.spyOn(emailValidatorStub, 'isValid')
     const httpRequest = {
       body: {
         name: 'any_name',
