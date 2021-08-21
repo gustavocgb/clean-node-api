@@ -39,3 +39,4 @@ export class SignUpController implements Controller {
     }
   }
 }
+// teste
