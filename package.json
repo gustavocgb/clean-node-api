@@ -4,7 +4,9 @@
   "description": "aa",
   "main": "index.js",
   "scripts": {
-    "test": "jest --passWithNoTests --watch",
+    "test": "jest --passWithNoTests --silent",
+    "test:verbose": "jest --passWithNoTests",
+    "test:unit": "npm test -- --watch",
     "test:staged": "lint-staged",
     "prepare": "husky install"
   },
