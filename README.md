@@ -28,6 +28,8 @@ jest:
   flags
     --silent => roda com detalhes otimizados 
     --runInBand => roda sequencial e não asincrono os testes
+    --findRelatedTests => roda tests aos arquivos que foram alterados
+    -c
 
 eslint:
   lint-staged
