@@ -9,6 +9,8 @@ export class DbAddAccount implements AddAccount {
     this.encrypter = encrypter
   }
 
+  // esse metodo nao pode ser implementado com try, catch. Pois ..
+  // .. quem captura o erro tem que ser a classe que chamou essa classe
   async add (account: AddAccountModel): Promise<AccountModel> {
     await this.encrypter.encrypt(account.password)
     return new Promise(resolve => resolve({
