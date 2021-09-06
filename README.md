@@ -24,6 +24,14 @@ git:
     git add .
     git commit --amend --no-edit
 
+  stash
+    quando não quiser comitar todos os arquivos. Com isso, adiciona o arquivo que não queria no stash
+      git stash push 'diretorio do arquivo'
+    listar arquivos no stash
+      git stash list
+    retirar arquivo do stash
+      git stash pop
+
 jest:
   flags
     --silent => roda com detalhes otimizados 
