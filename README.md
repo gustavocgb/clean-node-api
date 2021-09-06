@@ -47,4 +47,3 @@ husky:
     pre-commit
     pre-push
 
-Teste 2
