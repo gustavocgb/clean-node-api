@@ -46,3 +46,5 @@ husky:
   pra executar scripts antes de alguma ação
     pre-commit
     pre-push
+
+Teste
