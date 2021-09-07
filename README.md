@@ -55,3 +55,9 @@ sucrase
         "start": "sucrase-node src/main/server.ts"
 
 
+desing patterns
+    composite
+    adapter
+
+
+
