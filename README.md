@@ -47,3 +47,9 @@ husky:
     pre-commit
     pre-push
 
+fast-glob
+    equivalente ao fs
+
+sucrase
+    pra rodar o node com ts
+        "start": "sucrase-node src/main/server.ts"
