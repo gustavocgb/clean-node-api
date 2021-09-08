@@ -14,7 +14,7 @@ describe('SingUp Routes', () => {
 
   beforeEach(async () => {
     // limpar tabela para os testes
-    const accountCollection = MongoHelper.getCollection('accounts')
+    const accountCollection = await MongoHelper.getCollection('accounts')
     await accountCollection.deleteMany({})
   })
 

@@ -58,6 +58,6 @@ sucrase
 desing patterns
     composite
     adapter
-
+    singleton
 
 
