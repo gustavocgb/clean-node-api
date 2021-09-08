@@ -59,5 +59,5 @@ desing patterns
     composite
     adapter
     singleton
-
+    decorator
 
