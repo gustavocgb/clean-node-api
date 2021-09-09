@@ -47,7 +47,7 @@ husky:
     pre-commit
     pre-push
   criar
-    
+    npx husky-init
 
 fast-glob
     equivalente ao fs
