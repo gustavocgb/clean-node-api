@@ -45,4 +45,9 @@ describe('LogController Decorator', () => {
     await sut.handle(httRequest)
     expect(handleSpy).toHaveBeenCalledWith(httRequest)
   })
+
+  test('test push', async () => {
+    const aux = 'a'
+    expect(aux).toBe('a')
+  })
 })
