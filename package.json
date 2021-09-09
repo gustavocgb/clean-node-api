@@ -17,8 +17,7 @@
   "lint-staged": {
     "*.ts": [
       "eslint 'src/**' --fix",
-      "npm test -- --findRelatedTests",
-      "git add"
+      "npm run test:staged"
     ]
   },
   "keywords": [],
