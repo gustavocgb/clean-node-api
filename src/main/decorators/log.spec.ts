@@ -47,7 +47,7 @@ describe('LogController Decorator', () => {
   })
 
   test('test push', async () => {
-    const aux = 'a'
-    expect(aux).toBe('a')
+    const aux = 'b'
+    expect(aux).toBe('b')
   })
 })
